@@ -8,6 +8,6 @@ regex expression. The end goal being to further my understanding of github and r
 
 ## To-Do
 
-- [ ] Format the readme to make it look presentable
+- [X] Format the readme to make it look presentable
 
 - [ ] Start design on Rexex Parser
