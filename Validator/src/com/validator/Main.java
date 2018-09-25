@@ -71,7 +71,7 @@ public class Main {
 			Boolean done = false;
 			int potentialChange = -2;
 		
-			//For every character in the state machine, call checkForChangeChar on currentNode, then follow
+			//For every character in the character array, call checkForChangeChar on currentNode, then follow
 			//the conditionals.
 			for(int i = 0; i < testChars.length; i++) {
 				
