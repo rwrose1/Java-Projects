@@ -81,7 +81,7 @@ public class Validator {
 				//done to true. Then break the loop.
 				if (potentialChange == -1) {
 					
-					System.out.println("Failure at position " + i + ", found character " + testChars[i]);
+					System.out.println("Failure at position " + (i + 1) + ", found character " + testChars[i]);
 					done = true;
 					break;
 					

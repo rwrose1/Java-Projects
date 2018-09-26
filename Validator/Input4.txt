@@ -1,4 +1,3 @@
 aaabbba
 aba
 ba
-abc 
