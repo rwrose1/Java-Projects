@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Validator {
 
 	public static void main (String args[]) throws IOException {
 		
