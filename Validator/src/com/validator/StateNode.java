@@ -4,11 +4,9 @@ import java.util.ArrayList;
 
 public class StateNode {
 
-	//ArrayLists to store the state transitions.
 	private ArrayList<Character> changeChar;
 	private ArrayList<Integer> stateChange;
 	
-	//Constructor that initializes ArrayLists.
 	public StateNode() {
 		
 		changeChar = new ArrayList<Character>();
@@ -16,16 +14,15 @@ public class StateNode {
 		
 	}
 	
-	//Method to add state transition.
 	public void addStateChange(int state, char character) {
+		
+		//System.out.println(state + " " + character);
 		
 		stateChange.add(state);
 		changeChar.add(character);
 		
 	}
 	
-	//Method to check to see if the state has the transition character c. If the transition character
-	//exists, it returns the state that character transitions to. If not, the method returns -1.
 	public int checkForChangeChar(char c) {
 		
 		char test;
@@ -36,6 +33,8 @@ public class StateNode {
 			
 			if (c == test) {
 				
+				//System.out.print(i);
+				
 				return stateChange.get(i);
 			
 			}
@@ -45,8 +44,7 @@ public class StateNode {
 		return -1;
 		
 	}
-
-/*	Unnecessary test code.
+	
 	public void printAll(int specificState) {
 		
 		System.out.println();
@@ -58,7 +56,6 @@ public class StateNode {
 			a++;
 		}
 		
-	} 
-*/
+	}
 	
 }
