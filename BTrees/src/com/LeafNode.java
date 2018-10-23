@@ -18,14 +18,4 @@ class LeafNode extends Node {
         return integerList;
     }
 
-    /*public boolean search(int toBeSearched, int index) {
-        
-        if (index >= nodeList.size()) return false;
-
-        if (toBeSearched == nodeList.get(index)) return true;
-
-        return search(toBeSearched, ++index);
-
-    }*/
-
 }

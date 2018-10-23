@@ -22,17 +22,19 @@ public class Main
             System.out.println("Success!");
         }
 
+        if (searchRoot(7, head.getList())) {
+            System.out.println("Success! (2)");
+        }
+
     }
 
     public static boolean searchRoot(int toBeSearched, ArrayList<Node> search) {
 
-        System.out.println("Running search. List Size = " + search.size());
+        //System.out.println("Running search. List Size = " + search.size());
 
-        Node check = search.get(0);
-
-        if (check instanceof LeafNode) {
+        if (search.get(0) instanceof LeafNode) {
             LeafNode leaf = (LeafNode) search.get(0);
-            System.out.println("Searching Leaf");
+            //System.out.println("Searching Leaf");
             if (searchLeaf(toBeSearched, leaf.getList())) return true;
         
         } else {
