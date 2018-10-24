@@ -18,7 +18,7 @@ public class Main
         RootNode head = new RootNode(0, 100, new ArrayList<Node>(Arrays.asList(rootOne, rootTwo)));
 
         //Head Node contains entire range and a list of Nodes.
-        if (searchRoot(1, head.getList())) {
+        if (search(1, head)) {
             System.out.println("Success!");
         }
 
@@ -26,6 +26,12 @@ public class Main
             System.out.println("Success! (2)");
         }
 
+    }
+    
+    public static boolean search(int toBeSearched, RootNode head) {
+        if (head.getMin() > toBeSearched || head.getMax() < toBeSearched) return false;
+        
+        return searchRoot(toBeSearched, head.getList);
     }
 
     public static boolean searchRoot(int toBeSearched, ArrayList<Node> search) {
