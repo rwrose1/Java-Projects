@@ -1,6 +1,7 @@
 package com;
 
 import java.util.*;
+import com.SearchFunctions;
 
 public class Main 
 {
@@ -17,52 +18,14 @@ public class Main
 
         RootNode head = new RootNode(0, 100, new ArrayList<Node>(Arrays.asList(rootOne, rootTwo)));
 
-        //Head Node contains entire range and a list of Nodes.
-        if (searchRoot(1, head.getList())) {
-            System.out.println("Success!");
-        }
+        SearchFunctions.search(5, head);
+        SearchFunctions.search(28, head);
+        SearchFunctions.search(80, head);
 
-        if (searchRoot(7, head.getList())) {
-            System.out.println("Success! (2)");
-        }
-
-    }
-
-    public static boolean searchRoot(int toBeSearched, ArrayList<Node> search) {
-
-        //System.out.println("Running search. List Size = " + search.size());
-
-        if (search.get(0) instanceof LeafNode) {
-            LeafNode leaf = (LeafNode) search.get(0);
-            //System.out.println("Searching Leaf");
-            if (searchLeaf(toBeSearched, leaf.getList())) return true;
-        
-        } else {
-           
-            RootNode root = (RootNode) search.get(0);
-            if (root.getMin() <= toBeSearched && root.getMax() >= toBeSearched)
-                return searchRoot(toBeSearched, root.getList());
-
-        }
-        
-        search.remove(0);
-        
-        if (search.size() == 0) return false;
-
-        else return searchRoot(toBeSearched, search);
-    }
-
-
-
-    public static boolean searchLeaf(int toBeSearched, ArrayList<Integer> searchList) {
-
-        if (searchList.size() == 0) return false;
-
-        if (searchList.get(0) == toBeSearched) return true;
-
-        searchList.remove(0);
-
-        return searchLeaf(toBeSearched, searchList);
+        SearchFunctions.search(71, head);
+        SearchFunctions.search(30, head);
+        SearchFunctions.search(6, head);
 
     }
+
 }
